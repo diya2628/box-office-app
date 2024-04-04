@@ -8,6 +8,13 @@ const SearchForm = ({ onSearch }) => {
     setSearchStr(ev.target.value);
   };
 
+  // useEffect(() => {
+  //   console.log('Searchh option changes', searchOption); //mount
+  //   return () => {
+  //     console.log('Searchh option changedd', searchOption); //unmount
+  //   };
+  // }, [searchOption]);
+
   const onRadioChange = ev => {
     setSearchOption(ev.target.value);
   };
