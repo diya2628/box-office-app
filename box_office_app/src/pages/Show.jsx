@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // import { useEffect, useState } from 'react';
 import { getShowById } from '../api/tvmaze';
 import { useQuery } from '@tanstack/react-query';
@@ -42,6 +42,7 @@ const Show = () => {
   if (showData) {
     return (
       <div>
+        <Link to="/">Go Back To Home </Link>
         <ShowMainData
           image={showData.image}
           name={showData.name}
