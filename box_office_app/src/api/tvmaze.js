@@ -8,4 +8,5 @@ const getapi = async queryString => {
 
 export const searchForShows = query => getapi(`/search/shows?q=${query}`);
 export const searchForPeople = query => getapi(`/search/people?q=${query}`);
-export const getShowById = showId => getapi(`/shows/${showId}`);
+export const getShowById = showId =>
+  getapi(`/shows/${showId}?embed[]=seasons&embed[]=cast`);
