@@ -33,6 +33,7 @@ const Show = () => {
   const { data: showData, error: showError } = useQuery({
     queryKey: ['show', showId], //for app strict mode we used query key
     queryFn: () => getShowById(showId),
+
     refetchOnWindowFocus: false,
   });
   if (showError) {
