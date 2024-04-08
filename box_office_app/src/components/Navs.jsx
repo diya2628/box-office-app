@@ -34,6 +34,7 @@ const NavList = styled.ul`
   padding: 0;
   li {
     margin: 0 10px;
+    margin-top:2px;
   }
 `;
 

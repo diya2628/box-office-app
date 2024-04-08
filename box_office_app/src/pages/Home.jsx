@@ -6,7 +6,7 @@ import ShowsGrid from '../components/shows/ShowsGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from '@tanstack/react-query';
 import styled from 'styled-components';
-
+import { TextCenter } from '../components/common/TextCenter';
 const Home = () => {
   const [filter, setFilter] = useState(null);
 
@@ -48,7 +48,8 @@ const Home = () => {
   };
 
   const renderApi = () => {
-    if (apiDataError) return <div>Error Occurred: {apiDataError.message}</div>;
+    if (apiDataError)
+      return <TextCenter>Error Occurred: {apiDataError.message}</TextCenter>;
     if (apiData) {
       return apiData[0].show ? (
         <ShowsGrid shows={apiData} />
