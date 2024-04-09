@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-
+import noImgFound from '../../lib/no-image-found.png';
 const Cast = ({ cast }) => {
   return (
     <CastList>
       {cast.map(({ person, character, voice }) => (
         <div key={person.id} className="cast-item">
           <div className="pic-wrapper">
-            <img
-              src={person.image ? person.image.medium : '/no-image-found.png'}
-            />
+            <img src={person.image ? person.image.medium : noImgFound} />
           </div>
           <div>
             {person.name} | {character.name} {voice && 'VoiceOver'}

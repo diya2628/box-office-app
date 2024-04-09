@@ -3,29 +3,31 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "prettier",
+    "prettier"
   ],
   "plugins": ["react-hooks"],
   "env": {
     "browser": true,
     "es6": true,
+    "node": true
   },
+
   "parserOptions": {
     "ecmaVersion": 2021,
     "ecmaFeatures": {
-      "jsx": true,
+      "jsx": true
     },
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "settings": {
     "react": {
-      "version": "detect",
-    },
+      "version": "detect"
+    }
   },
   "rules": {
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": "warn",
-  },
+    "no-unused-vars": "warn"
+  }
 }
